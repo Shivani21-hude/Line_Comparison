@@ -8,21 +8,45 @@ namespace LineComparison
 {
     internal class CompareLine
     {
-        public static void Compare()
+        public static void CheckEuality()
         {
 
-            Console.WriteLine("enter values for line: ");
+            Console.WriteLine("enter values for first line: ");
             Console.Write("x1: ");
-            double x1 = Convert.ToInt32(Console.ReadLine());
+            int x1 = Convert.ToInt32(Console.ReadLine());
             Console.Write("x2: ");
-            double x2 = Convert.ToInt32(Console.ReadLine());
+            int y1 = Convert.ToInt32(Console.ReadLine());
             Console.Write("y1: ");
-            double y1 = Convert.ToInt32(Console.ReadLine());
+            int x2 = Convert.ToInt32(Console.ReadLine());
             Console.Write("y2: ");
-            double y2 = Convert.ToInt32(Console.ReadLine());
+            int y2 = Convert.ToInt32(Console.ReadLine());
 
-            double length = Math.Sqrt((Math.Pow((x2 - x1), 2)) + (Math.Pow((y2 - y1), 2)));
-            Console.WriteLine("The lenth of the given cordinate is: " + length);
+            Console.WriteLine("enter values for second line: ");
+            Console.Write("p1: ");
+            int p1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("q1: ");
+            int q1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("p2: ");
+            int p2 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("q2: ");
+            int q2 = Convert.ToInt32(Console.ReadLine());
+
+            double Lengthofline1 = Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2));
+            Console.WriteLine("Length of line 1 = " + Lengthofline1);
+
+            double Lengthofline2 = Math.Sqrt(Math.Pow((p2 - p1), 2) + Math.Pow((q2 - q1), 2));
+            Console.WriteLine("Length of line 2 = " + Lengthofline2);
+
+            Boolean result = Lengthofline1.Equals(Lengthofline2);
+
+            if (result == true)
+            {
+                Console.WriteLine("Lines are equal");
+            }
+            else
+            {
+                Console.WriteLine("Lines are not equal");
+            }
         }
     }
 }

@@ -6,7 +6,7 @@ namespace LineComparison
         public static void Main(string[] args)
         {
             Console.WriteLine("Line Comparison Problem \n ");
-            CompareLine.Compare();
+            CompareLine.CheckEuality();
         }
     }
 }
